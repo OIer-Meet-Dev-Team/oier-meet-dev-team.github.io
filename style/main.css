@@ -46,20 +46,6 @@ table {
 	text-align:center;
 }
 
-a:link {
-	color:white;
-	background-color:#98bf21;
-	width:100px;
-	text-align:center;
-	padding:2px;
-	text-decoration:none;
-}
-
-a:hover, a:active {
-	background-color:Blue;
-	text-decoration:underline;
-}
-
 .header {
 }
 

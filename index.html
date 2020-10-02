@@ -1,36 +1,119 @@
-<!DOCTYPE html>
-<html>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="" />
-	<meta charset="utf-8">
-	<head>
-		<link rel="stylesheet" type="text/css" href="/style/main.css"> 
-<!-- 		<script type="text/javascript" src="/script/mouse/fireworks.js"></script> -->
-		<script type="text/javascript" src="/script/sakura.js"></script>
-		<title>OIer-meet</title>
-		<script language="javascript">
-			function click_search_btn() {
-				var search_province = document.getElementById('meet-province-search').value;
-				location.href = "/province="+search_province;
-			}
-		</script>
-	</head>
-	<body>
-		<div class="meet-article">
-			<div class="main">
-				<h1>MEET！</h1>
-				<a href="/province">省份</a>
-				<a href="/contribute">如何贡献？</a>
-			</div>
-			<div class="footer">
-				<div class="copyright" align="center">
-					&copy;Copyright 2020 <a href="http://www.trotyl.cf">Trotyl</a>
+<!doctype html>
+<html lang="zh-cmn-Hans">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script type="text/javascript" src="/script/sakura.js"></script>
+    <link rel="stylesheet" type="text/css" href="/style/main.css"> 
+    <!-- MDUI CSS Including-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+      integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
+      crossorigin="anonymous"
+    />
+    <title>OIer-Meet</title>
+    <script language="javascript">
+	function click_search_btn() {
+	    var search_province = document.getElementById('meet-province-search').value;
+	    location.href = "/province="+search_province;
+	}
+    </script>
+  </head>
+  <body>
+    <div class="meet-article">
+	<div class="mdui-container">
+  <div class="mdui-panel mdui-panel-popout" mdui-panel>
+    <div class="mdui-panel-item">
+      <div class="mdui-panel-item-header">地区</div>
+      <div class="mdui-panel-item-body">
+        <div class="mdui-typo">
+            <a href="/province=安徽" class="btn btn-link">安徽</a>
+  					<a href="/province=北京" class="btn btn-link">北京</a>
+  					<a href="/province=福建" class="btn btn-link">福建</a>
+  					<a href="/province=甘肃" class="btn btn-link">甘肃</a>
+  					<a href="/province=广东" class="btn btn-link">广东</a>
+  					<a href="/province=广西" class="btn btn-link">广西</a><br>
+  					<a href="/province=贵州" class="btn btn-link">贵州</a>
+  					<a href="/province=海南" class="btn btn-link">海南</a>
+  					<a href="/province=河北" class="btn btn-link">河北</a>
+  					<a href="/province=河南" class="btn btn-link">河南</a>
+  					<a href="/province=黑龙江" class="btn btn-link">黑龙江</a>
+  					<a href="/province=湖北" class="btn btn-link">湖北</a><br>
+  					<a href="/province=湖南" class="btn btn-link">湖南</a>
+  					<a href="/province=吉林" class="btn btn-link">吉林</a>
+  					<a href="/province=江苏" class="btn btn-link">江苏</a>
+  					<a href="/province=江西" class="btn btn-link">江西</a>
+  					<a href="/province=辽宁" class="btn btn-link">辽宁</a>
+  					<a href="/province=内蒙古" class="btn btn-link">内蒙古</a><br>
+  					<a href="/province=山东" class="btn btn-link">山东</a>
+  					<a href="/province=山西" class="btn btn-link">山西</a>
+  					<a href="/province=陕西" class="btn btn-link">陕西</a>
+  					<a href="/province=上海" class="btn btn-link">上海</a>
+  					<a href="/province=四川" class="btn btn-link">四川</a>
+  					<a href="/province=天津" class="btn btn-link">天津</a><br>
+  					<a href="/province=新疆" class="btn btn-link">新疆</a>
+  					<a href="/province=浙江" class="btn btn-link">浙江</a>
+  					<a href="/province=重庆" class="btn btn-link">重庆</a>
+  					<a href="/province=宁夏" class="btn btn-link">宁夏</a>
+  					<a href="/province=云南" class="btn btn-link">云南</a>
+  					<a href="/province=澳门" class="btn btn-link">澳门</a><br>
+  					<a href="/province=香港" class="btn btn-link">香港</a>
+  					<a href="/province=青海" class="btn btn-link">青海</a>
+  					<a href="/province=西藏" class="btn btn-link">西藏</a>
+  					<a href="/province=台湾" class="btn btn-link">台湾</a><br>
+  					<blockquote>
+              <p>排序是随便排的，见谅QwQ</p>
+            </blockquote>
+  				</div>
+      </div>
+    </div>
+    <div class="mdui-panel-item">
+      <div class="mdui-panel-item-header">贡献</div>
+      <div class="mdui-panel-item-body">
+        <div class="mdui-typo">
+          <p>
+						如果您想贡献数据给 OIer-meet，您可以按照以下格式将数据在<a href="https://github.com/TNTtian/OIer-meet/issues/1" target="_blank">此 Issue</a> 发送！<br>
+						也可以在洛谷<strong>同时</strong>私信UID为<code>128369</code>&<code>197881</code>的<strong>两位用户</strong>，以尽快处理，</br>
+						提供数据格式：<strong><code>比赛名称</code>+<code>空格</code>+<code>准考证号</code>+<code>空格</code>+<code>所在OJ</code>+<code>@</code>+<code>用户名</code>+<code>(uid=</code>+<code>所在OJ的uid</code>+<code>)</code></strong><br>
+						例如：<br>
+						<code>CSp2020-S1 BJ-00653 Luogu@Trotyl(uid=128369)</code><br>
+						<code>NOIp1919-pj BJ-00810 Luogu@Trotyl(uid=128369)</code><br>
+						<strong>若未按照此格式提交，概不接受！</strong>
+					</p>
 				</div>
-				<div class="count" align="center">
-					<small><script type="text/javascript" src="/script/count.js"></script></small>
-				</div>
-			</div>
-		</div>
-	</body>
+      </div>
+    </div>
+    <div class="mdui-panel-item">
+      <div class="mdui-panel-item-header">更新日志</div>
+      <div class="mdui-panel-item-body">
+        <p>计划中：樱花特效开启开关（需要cookie支持）</p>
+      </div>
+    </div>
+  </div>
+</div>
+        <div class="footer">
+            <div class="copyright" align="center">
+		    <div class="mdui-typo">
+    	        &copy;Copyright 2020 <a href="http://www.trotyl.cf">Trotyl</a>&<a href="http://www.pathunknown.ml">UserUnknown</a>
+    	    </div>
+    	    </div>
+    	    <div class="count" align="center">
+	        <small><script type="text/javascript" src="/script/count.js"></script></small>
+            </div>
+	</div>
+    </div>
+    <!-- MDUI JavaScript Including-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+      integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+    
+    <!--Refresh Button-->
+    <a href="https://面基.now.sh"><button class=" mdui-fab mdui-fab-fixed" mdui-tooltip="{content: 'Home',position: 'top'}"><i class="mdui-icon material-icons">home</i></button>
 </html>
