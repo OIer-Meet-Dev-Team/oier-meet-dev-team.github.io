@@ -56,6 +56,17 @@
 		</div>
 	</body>
 	<foot>
-		<div align="center"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3245809&c=9737740" alt="AmazingCounters.com"></div>
+		<?php
+			@session_start();
+			$counter = intval(file_get_contents("counter.dat"));
+			if(!$_SESSION['#']) {
+				$_SESSION['#'] = true;
+				$counter++;
+				$fp = fopen("counter.dat","w");
+				fwrite($fp, $counter);
+				fclose($fp);
+			}
+		?>
+		<p align="center">您是到访的第<?php echo "$counter";?>位用户<p>
 	</foot>
 </html>
