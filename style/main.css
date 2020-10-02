@@ -16,17 +16,15 @@ p, a {
 }
 
 a:link {
-	/*
-	display:block;
+/* 	display:block;
 	font-weight:bold;
 	font-size:14px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-family:Verdana, Arial, Helvetica, sans-serif; */
 	color:#FFFFFF;
 	background-color:#98bf21;
 	width:120px;
 	text-align:center;
 	padding:4px;
-	*/
 	text-decoration:none;
 }
 
