@@ -1,4 +1,4 @@
-table.hovertable {
+table.maintable {
     font-family: verdana,arial,sans-serif;
     font-size:11px;
     color:#333333;
@@ -6,17 +6,17 @@ table.hovertable {
     border-color: #999999;
     border-collapse: collapse;
 }
-table.hovertable th {
+table.maintable th {
     background-color:#c3dde0;
     border-width: 1px;
     padding: 8px;
     border-style: solid;
     border-color: #a9c6c9;
 }
-table.hovertable tr {
+table.maintable tr {
     background-color:#d4e3e5;
 }
-table.hovertable td {
+table.maintable td {
     border-width: 1px;
     padding: 8px;
     border-style: solid;
