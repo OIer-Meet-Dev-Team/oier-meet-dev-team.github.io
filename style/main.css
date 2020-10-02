@@ -11,7 +11,7 @@ p {
 	font-family:"楷体";
 	font-size:20px;
 }
-
+/*
 a:link,a:visited {
 	display:block;
 	font-weight:bold;
@@ -28,6 +28,6 @@ a:link,a:visited {
 a:hover,a:active {
 	background-color:#7A991A;
 }
-
+*/
 a:visited {text-decoration:none;} 
 a:hover {text-decoration:underline;}
