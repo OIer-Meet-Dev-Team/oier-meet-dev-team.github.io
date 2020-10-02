@@ -77,7 +77,7 @@ a:hover, a:active {
 }
 
 body:before {
-    background: url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1601631814&di=9ac06b9a42f2e6d44092d0b94f140093&src=http://hbimg.b0.upaiyun.com/c73e739493fff78d0cf26df80c04ba18bc270a1c14aa9-WNwQZn_fw658) center/cover no-repeat;
+    background: url(https://random-pic.now.sh/api) center/cover no-repeat;
     content: '';
     background-repeat: no-repeat;
     background-position: center;
