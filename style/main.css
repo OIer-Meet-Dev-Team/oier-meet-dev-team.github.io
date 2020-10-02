@@ -8,8 +8,11 @@ h1 {
 }
 
 p {
-	font-family:"楷体";
 	font-size:20px;
+}
+
+p, a {
+	font-family:"Consolas";
 }
 
 a:link {
@@ -27,7 +30,7 @@ a:link {
 	text-decoration:none;
 }
 
-a:hover,a:active {
+a:hover, a:active {
 	background-color:#7A991A;
 	text-decoration:underline;
 }
