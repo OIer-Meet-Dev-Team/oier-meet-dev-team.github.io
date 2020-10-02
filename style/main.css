@@ -1,5 +1,28 @@
+@font-face {
+  font-family: 'Playball';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playball'), local('Playball-Regular'), url(https://fonts.gstatic.com/s/playball/v9/TK3gWksYAxQ7jbsKcg8Knep_Kg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Playball';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Playball'), local('Playball-Regular'), url(https://fonts.gstatic.com/s/playball/v9/TK3gWksYAxQ7jbsKcg8Eneo.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
-    background-color:#d0e4fe;
+	cursor: url('https://files-cdn.cnblogs.com/files/Xing-Ling/Aero_arrow.ico'),pointer;/*鼠标图案*/
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    color: #333;
+    white-space: normal;
+    font-family: "Helvetica Neue", Helvetica,"Microsoft Yahei", "Hiragino Sans GB","Source Han Sans", "PingFang SC",Arial,"Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
 h1, h2, h3 {
@@ -51,4 +74,24 @@ a:hover, a:active {
 	width:100%;
 	height:100px;
 	text-align: center;
+}
+
+body:before {
+    background: url(https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1601631814&di=9ac06b9a42f2e6d44092d0b94f140093&src=http://hbimg.b0.upaiyun.com/c73e739493fff78d0cf26df80c04ba18bc270a1c14aa9-WNwQZn_fw658) center/cover no-repeat;
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.08;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    -webkit-filter: grayscale(40%);
+    -moz-filter: grayscale(40%);
+    -ms-filter: grayscale(40%);
+    -o-filter: grayscale(40%);
+    filter: grayscale(40%);
+    filter: gray;
 }
