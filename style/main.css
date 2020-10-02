@@ -2,7 +2,7 @@ body {
     background-color:#d0e4fe;
 }
 
-h1 {
+h1, h2, h3 {
 	color:orange;
 	text-align:center;
 }
