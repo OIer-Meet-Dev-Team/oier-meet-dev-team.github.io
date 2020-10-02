@@ -11,8 +11,9 @@ p {
 	font-family:"楷体";
 	font-size:20px;
 }
-/*
+
 a:link,a:visited {
+	/*
 	display:block;
 	font-weight:bold;
 	font-size:14px;
@@ -22,12 +23,11 @@ a:link,a:visited {
 	width:120px;
 	text-align:center;
 	padding:4px;
+	*/
 	text-decoration:none;
 }
 
 a:hover,a:active {
 	background-color:#7A991A;
+	text-decoration:underline;
 }
-*/
-a:visited {text-decoration:none;} 
-a:hover {text-decoration:underline;}
