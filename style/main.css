@@ -34,3 +34,11 @@ a:hover, a:active {
 	background-color:#7A991A;
 	text-decoration:underline;
 }
+
+.footer-count {
+	position: absolute;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	width: 100%;
+}
