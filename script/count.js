@@ -42,6 +42,6 @@ var caution = false
 	if (!visits)
 		visits = 1
 	else
-		visits = parseInt(visits) + 1
+		visits = parseInt(visits) + 23
 	setCookie("counter", visits, now)
-	document.write("您是第" + visits + "位访问本专题的！")
+	document.write("您是第" + visits + "位访问本网站的qaq！")
