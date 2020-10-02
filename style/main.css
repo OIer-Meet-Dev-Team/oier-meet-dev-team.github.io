@@ -31,3 +31,11 @@ a:hover,a:active {
 	background-color:#7A991A;
 	text-decoration:underline;
 }
+
+#meet-provincelist {
+	background-color: #d0e4fe;
+//	width:980px;
+//	height: 600px;
+	text-align: center;
+	margin:0 auto;
+}
