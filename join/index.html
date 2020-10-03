@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+		<meta name="renderer" content="webkit"/>
+		<meta name="force-rendering" content="webkit"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<script type="text/javascript" src="/script/checker.js"></script>
+		<link rel="stylesheet" type="text/css" href="/style/main.css"> 
+		<!-- MDUI CSS Including-->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+			integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
+			crossorigin="anonymous"
+		/>
+		<title>OIer-Meet</title>
+		<script language="javascript">
+			function click_search_btn() {
+				var search_province = document.getElementById('meet-province-search').value;
+				location.href = "/province="+search_province;
+			}
+			function shang() {
+				swal("谢谢，但","暂不支持赞赏qaq","info");
+			}
+		</script>
+	</head>
+	<body>
+		<div class="meet-article">
+			<div class="mdui-container">
+				<div class="mdui-panel mdui-panel-popout" mdui-panel>
+					<div class="mdui-panel-item">
+						<div class="mdui-panel-item-header">加入开发团</div>
+							<div class="mdui-panel-item-body">
+								<div class="mdui-typo">
+									<p>
+										如果您想加入OIer-meet开发团，您可以洛谷私信 <a href="https://www.luogu.com.cn/user/128369" target="_blank">Trotyl</a><br>
+									</p>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="footer">
+					<div class="copyright">
+						<div class="mdui-typo">
+							&copy;Copyright 2020 <a href="http://www.OIer-meet.tk">OIer-meet</a><br>
+							本站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><strong>CC-BY-NC-SA 4.0</strong></a> 协议进行授权
+						</div>
+					</div>
+					<div class="count">
+						<small><script type="text/javascript" src="/script/count.js"></script></small>
+						<script>
+							if (visits<=1){
+								swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您继续浏览，则代表您同意此条约（此弹窗仅在您首次访问时出现）", "info");
+							}
+							if (vistits>1){
+								check_sakura();
+							}
+						</script>
+					</div>
+				</div> 
+			</div>
+		</div>
+		
+		<!-- MDUI JavaScript Including-->
+		<script
+			src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+			integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+			crossorigin="anonymous"
+		></script>
+	</body>
+	
+	<!--Button-->
+	
+	<div class="mdui-fab-wrapper" id="fab">
+		<button class="mdui-fab mdui-ripple mdui-color-pink-accent">
+			<i class="mdui-icon material-icons">list</i>
+			<i class="mdui-icon mdui-fab-opened material-icons">apps</i>
+		</button>
+		<div class="mdui-fab-dial">
+			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink-a100" mdui-tooltip="{content: '开启/关闭樱花特效（需要cookie支持）', position: 'left'}"><i class="mdui-icon material-icons">filter_vintage</i>
+			</button>
+			<a href="/join"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" mdui-tooltip="{content: '加入开发团队', position: 'left'}"><i class="mdui-icon material-icons">card_membership</i>
+			</button></a>
+			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" mdui-tooltip="{content: '赞赏', position: 'left'}" onclick="shang()"><i class="mdui-icon material-icons">attach_money</i>
+			</button>
+			<a href="/"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '返回首页', position: 'left'}"><i class="mdui-icon material-icons">home</i>
+			</button>
+			<script>
+				var inst = new mdui.Fab('#fab');
+
+				// event
+				var fab = document.getElementById('fab');		
+				fab.addEventListener('open.mdui.fab', function () {
+					console.log('open');
+				});
+		
+				fab.addEventListener('opened.mdui.fab', function () {
+					console.log('opened');
+				});
+
+				fab.addEventListener('close.mdui.fab', function () {
+					console.log('close');
+				});
+
+				fab.addEventListener('closed.mdui.fab', function () {
+					console.log('closed');
+				});
+
+			</script>
+		</div>
+	</div>
+</html>
