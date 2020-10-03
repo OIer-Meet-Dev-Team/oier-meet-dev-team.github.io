@@ -5,5 +5,3 @@
 [如何贡献数据](https://github.com/TNTtian/OIer-meet/issues/1)
 
 **声明：数据均来自网络，若有侵权请及时联系我删掉**
-
-[更快的线路](https://面基.now.sh)
