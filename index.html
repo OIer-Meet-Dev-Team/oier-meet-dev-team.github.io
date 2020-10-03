@@ -7,6 +7,7 @@
 		<meta name="force-rendering" content="webkit"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<script type="text/javascript" src="/script/sakura.js"></script>
+		<script type="text/javascript" src="/script/indexbutton.js"></script>
 		<link rel="stylesheet" type="text/css" href="/style/main.css"> 
 		<!-- MDUI CSS Including-->
 		<link
@@ -128,6 +129,24 @@
 		></script>
 	</body>
 	
-	<!--Refresh Button-->
-	<a href="/"><button class=" mdui-fab mdui-fab-fixed" mdui-tooltip="{content: 'Home',position: 'top'}"><i class="mdui-icon material-icons">home</i></button>
+	<!--Button-->
+	<div class="mdui-fab-wrapper" id="fab">
+    <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
+      <i class="mdui-icon material-icons">list</i>
+      <i class="mdui-icon mdui-fab-opened material-icons">apps</i>
+    </button>
+    <div class="mdui-fab-dial">
+      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink-a100" mdui-tooltip="{content: '开启/关闭樱花特效（需要cookie支持）', position: 'left'}"><i class="mdui-icon material-icons">filter_vintage</i>
+      </button>
+      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '©2020-2020 OIer-Meet!', position: 'left'}"><i class="mdui-icon material-icons">copyright</i>
+      </button>
+      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" mdui-tooltip="{content: '加入开发团队', position: 'left'}"><i class="mdui-icon material-icons">card_membership</i>
+      </button>
+      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" mdui-tooltip="{content: '赞赏', position: 'left'}"><i class="mdui-icon material-icons">attach_money</i>
+      </button>
+      <a href="/"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '返回首页', position: 'left'}"><i class="mdui-icon material-icons">home</i>
+      </button>
+      
+    </div>
+  </div>
 </html>
