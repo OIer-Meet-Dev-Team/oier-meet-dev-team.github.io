@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
 	<head>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
 		<meta name="renderer" content="webkit"/>
@@ -118,6 +119,11 @@
 					</div>-->
 					<div class="count" align="center">
 						<small><script type="text/javascript" src="/script/count.js"></script></small>
+						<script>
+						if (visits<=1){
+							swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您继续浏览，则代表您同意此条约", "info");
+						}
+						</script>
 					</div>
 				</div> 
 			</div>
