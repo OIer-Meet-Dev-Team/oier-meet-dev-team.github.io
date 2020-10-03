@@ -21,6 +21,9 @@
 				var search_province = document.getElementById('meet-province-search').value;
 				location.href = "/province="+search_province;
 			}
+			function shang() {
+				alert("暂不支持赞赏qaq");
+			}
 		</script>
 	</head>
 	<body>
@@ -131,43 +134,43 @@
 	<!--Button-->
 	
 	<div class="mdui-fab-wrapper" id="fab">
-    <button class="mdui-fab mdui-ripple mdui-color-pink-accent">
-      <i class="mdui-icon material-icons">list</i>
-      <i class="mdui-icon mdui-fab-opened material-icons">apps</i>
-    </button>
-    <div class="mdui-fab-dial">
-      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink-a100" mdui-tooltip="{content: '开启/关闭樱花特效（需要cookie支持）', position: 'left'}"><i class="mdui-icon material-icons">filter_vintage</i>
-      </button>
-      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '©2020-2020 OIer-Meet!', position: 'left'}"><i class="mdui-icon material-icons">copyright</i>
-      </button>
-      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" mdui-tooltip="{content: '加入开发团队', position: 'left'}"><i class="mdui-icon material-icons">card_membership</i>
-      </button>
-      <button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" mdui-tooltip="{content: '赞赏', position: 'left'}"><i class="mdui-icon material-icons">attach_money</i>
-      </button>
-      <a href="/"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '返回首页', position: 'left'}"><i class="mdui-icon material-icons">home</i>
-      </button>
-	<script>
-		var inst = new mdui.Fab('#fab');
+		<button class="mdui-fab mdui-ripple mdui-color-pink-accent">
+			<i class="mdui-icon material-icons">list</i>
+			<i class="mdui-icon mdui-fab-opened material-icons">apps</i>
+		</button>
+		<div class="mdui-fab-dial">
+			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-pink-a100" mdui-tooltip="{content: '开启/关闭樱花特效（需要cookie支持）', position: 'left'}"><i class="mdui-icon material-icons">filter_vintage</i>
+			</button>
+			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '?2020-2020 OIer-Meet!', position: 'left'}"><i class="mdui-icon material-icons">copyright</i>
+			</button>
+			<a href="/join"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-orange" mdui-tooltip="{content: '加入开发团队', position: 'left'}"><i class="mdui-icon material-icons">card_membership</i></a>
+			</button>
+			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" mdui-tooltip="{content: '赞赏', position: 'left'}" onclick="shang()"><i class="mdui-icon material-icons">attach_money</i>
+			</button>
+			<a href="/"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '返回首页', position: 'left'}"><i class="mdui-icon material-icons">home</i>
+			</button>
+			<script>
+				var inst = new mdui.Fab('#fab');
 
-		// event
-		var fab = document.getElementById('fab');		
-		fab.addEventListener('open.mdui.fab', function () {
-		  console.log('open');
-		});
+				// event
+				var fab = document.getElementById('fab');		
+				fab.addEventListener('open.mdui.fab', function () {
+					console.log('open');
+				});
 		
-		fab.addEventListener('opened.mdui.fab', function () {
-		  console.log('opened');
-		});
+				fab.addEventListener('opened.mdui.fab', function () {
+					console.log('opened');
+				});
 
-		fab.addEventListener('close.mdui.fab', function () {
-		  console.log('close');
-		});
+				fab.addEventListener('close.mdui.fab', function () {
+					console.log('close');
+				});
 
-		fab.addEventListener('closed.mdui.fab', function () {
-		  console.log('closed');
-		});
+				fab.addEventListener('closed.mdui.fab', function () {
+					console.log('closed');
+				});
 
-	</script>
-    </div>
-  </div>
+			</script>
+		</div>
+	</div>
 </html>
