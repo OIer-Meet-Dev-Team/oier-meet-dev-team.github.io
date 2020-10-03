@@ -14,16 +14,16 @@
 }
 
 body {
-    cursor: url('https://files-cdn.cnblogs.com/files/Xing-Ling/Aero_arrow.ico'),pointer;/*鼠标图案*/
-    cursor:default;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 0;
-    color: #333;
-    white-space: normal;
-    font-family: "Helvetica Neue", Helvetica,"Microsoft Yahei", "Hiragino Sans GB","Source Han Sans", "PingFang SC",Arial,"Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+	padding-top: 60px;
+	cursor: url('https://files-cdn.cnblogs.com/files/Xing-Ling/Aero_arrow.ico'),pointer;/*鼠标图案*/
+	cursor:default;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #333;
+	white-space: normal;
+	font-family: "Helvetica Neue", Helvetica,"Microsoft Yahei", "Hiragino Sans GB","Source Han Sans", "PingFang SC",Arial,"Heiti SC", "WenQuanYi Micro Hei", sans-serif;
 }
 
 h1, h2, h3 {
@@ -58,36 +58,45 @@ table {
 }
 
 .footer {
-    width: 100%;
-    color: Black;
-/*     float: left; */
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    margin-bottom: 30px;
-    /* background-color: blue; */
+	width: 100%;
+	color: Black;
+/*	 float: left; */
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	margin-bottom: 30px;
+	/* background-color: blue; */
 }
 
 .footer a:hover {
-    color: rgb(0, 81, 255);
+	color: rgb(0, 81, 255);
 }
 
 body:before {
-    background: url(https://random-pic.now.sh/api) center/cover no-repeat;
-    content: '';
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    -webkit-filter: grayscale(40%);
-    -moz-filter: grayscale(40%);
-    -ms-filter: grayscale(40%);
-    -o-filter: grayscale(40%);
-    filter: grayscale(40%);
-    filter: gray;
+	background: url(https://random-pic.now.sh/api) center/cover no-repeat;
+	content: '';
+	background-repeat: no-repeat;
+	background-position: center;
+	opacity: 0.3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	-webkit-filter: grayscale(40%);
+	-moz-filter: grayscale(40%);
+	-ms-filter: grayscale(40%);
+	-o-filter: grayscale(40%);
+	filter: grayscale(40%);
+	filter: gray;
+}
+
+#banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 60px;
+	background: #607D8B;
 }
