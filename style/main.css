@@ -32,6 +32,7 @@ h1, h2, h3 {
 }
 
 p {
+	cursor: url('https://files-cdn.cnblogs.com/files/Xing-Ling/Aero_arrow.ico'),pointer;/*鼠标图案*/
 	cursor:default;
 	font-size:20px;
 }
@@ -76,7 +77,7 @@ body:before {
     content: '';
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.5;
+    opacity: 0.3;
     position: fixed;
     top: 0;
     left: 0;
