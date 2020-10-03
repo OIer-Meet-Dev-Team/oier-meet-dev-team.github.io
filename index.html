@@ -8,6 +8,7 @@
 		<meta name="force-rendering" content="webkit"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 		<script type="text/javascript" src="/script/sakura.js"></script>
+		<script type="text/javascript" src="/script/checker.js"></script>
 		<link rel="stylesheet" type="text/css" href="/style/main.css"> 
 		<!-- MDUI CSS Including-->
 		<link
@@ -23,7 +24,7 @@
 				location.href = "/province="+search_province;
 			}
 			function shang() {
-				alert("暂不支持赞赏qaq");
+				swal("谢谢，但","暂不支持赞赏qaq","info");
 			}
 		</script>
 	</head>
@@ -123,6 +124,9 @@
 						<script>
 							if (visits<=1){
 								swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您继续浏览，则代表您同意此条约（此弹窗仅在您首次访问时出现）", "info");
+							}
+							if (vistits>1){
+								check_sakura();
 							}
 						</script>
 					</div>
