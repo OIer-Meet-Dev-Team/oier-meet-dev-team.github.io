@@ -29,3 +29,5 @@ function change_it(on_or_off){
         console.log("Trun On");
     } 
 }
+//此文件还需写check_sakura()
+//用于打开和关闭樱花特效
