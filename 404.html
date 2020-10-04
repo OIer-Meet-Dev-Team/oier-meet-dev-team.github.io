@@ -1,90 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>页面找不到了qaq</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      display: flex;
-      flex-direction: column;
-      height: 100vh;
-      text-align: center;
-    }
-    .box {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .number {
-      font-size: 80px;
-      color: #666;
-      font-weight: bold;
-    }
-    .text {
-      font-size: 14px;
-      margin: 24px;
-      color: #333;
-    }
-    .btn-container {
-      display: flex;
-      justify-content: center;
-    }
-    .btn {
-      padding: 8px 24px;
-      display: inline-block;
-      text-decoration: none;
-      background: #fff;
-      border: 2px solid #efefef;
-      color: #333;
-      margin: 24px;
-      border-radius: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-    }
-    .footer {
-      padding: 16px;
-      border-top: 1px solid #efefef;
-      color: #777;
-      font-weight: lighter;
-    }
-    .footer a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #000;
-    }
-  </style>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+	<meta name="renderer" content="webkit"/><!---->
+	<meta name="force-rendering" content="webkit"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/tomorrow.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/math.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/style.css?20181212" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/morris.js/0.5.1/morris.css" rel="stylesheet">
+	
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/fira-mono.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/lato.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/open-sans.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/exo-2.css" rel="stylesheet">
+	
+	<script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/jquery/3.3.1/jquery.min.js"></script>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+
+	<script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/script.js?20170710"></script>
+
+	<title>OIer meet!</title>
+	
+	<script language="javascript">
+		function click_search_btn() {
+		var search_province = document.getElementById('meet-province-search').value;
+			location.href = "/province="+search_province;
+		}
+		
+		function shang() {
+			swal("谢谢，但","暂不支持赞赏qaq","info");
+		}
+		
+		$(document).ready(() => {
+			$('.ui.checkbox').checkbox();
+			$('.menu .item').tab();
+			$('.button').popup();
+				$('.ui.menu a.item').on('click', function () {
+				$(this)
+					.addClass('active')
+					.siblings()
+					.removeClass('active');
+			});
+		});
+	</script>
+	
+	<!--- Gitter --->
+	<script>
+		((window.gitter = {}).chat = {}).options = {
+			room: 'OIer-Meet/community'
+		};
+	</script>
+	
 </head>
+
 <body>
-  <div class="box">
-    <div class="number">4 0 4</div>
-    <div class="text">
-      <p>这里还没有数据呢！</p></br>
-      <a href="https://面基.now.sh/#tab2-how-con">要不要贡献一点？（他人数据要先征得别人同意哦qaq）</a>
-    </div>
-    <div class="btn-container">
-      <a class="btn" id="back">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
-          <path fill="none" d="M0 0h24v24H0z"/>
-          <path d="M5.828 7l2.536 2.536L6.95 10.95 2 6l4.95-4.95 1.414 1.414L5.828 5H13a8 8 0 1 1 0 16H4v-2h9a6 6 0 1 0 0-12H5.828z"/>
-        </svg>
-        原路返回
-      </a>
-    </div>
-  </div>
-  <footer class="footer">
-    Powered by <a href="http://www.oier-meet.tk" target="_self">OIer-meet</a>
-  </footer>
-  <script>
-    var back = document.getElementById('back')
-    back.onclick = function() { console.log('run...'); history.back() }
-  </script>
+	<div class="ui borderless menu" style="height: 49px; ">
+		<div class="ui container">
+			<div class="header item">
+				<span style="font-family: 'Exo 2'; font-size: 1.5em; font-weight: 600; ">OIer meet!</span>
+			</div>
+			<a class="item" data-tab="home"><i class="home icon"></i>首页</a>
+			<a class="item" data-tab="province"><i class="map icon"></i>地区</a>
+			<a class="item" data-tab="how-con"><i class="question icon"></i>如何贡献</a>
+			<a class="item" data-tab="contribute"><i class="list icon"></i>贡献列表</a>
+			<a class="item" data-tab="update"><i class="history icon"></i>更新日志</a>
+		</div>
+	</div>
+	<div class="ui tab active container" data-tab="404">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="two column row">
+							<div class="eleven wide column">
+								<div class="ui bottom attached segment">
+									<h1>
+										4 0 4
+									</h1>
+									<p>这里还没有数据呢！</p></br>
+									<a href="#how-con">要不要贡献一点？（他人数据要先征得别人同意哦qaq）</a>
+									<a class="btn" id="back">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" style="margin-right: 8px;">
+											<path fill="none" d="M0 0h24v24H0z"/>
+											<path d="M5.828 7l2.536 2.536L6.95 10.95 2 6l4.95-4.95 1.414 1.414L5.828 5H13a8 8 0 1 1 0 16H4v-2h9a6 6 0 1 0 0-12H5.828z"/>
+										</svg>
+										原路返回
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var back = document.getElementById('back')
+		back.onclick = function() { console.log('run...'); history.back() }
+	</script>
 </body>
-</html>
