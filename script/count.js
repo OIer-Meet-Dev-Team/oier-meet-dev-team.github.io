@@ -44,4 +44,4 @@ var caution = false
 	else
 		visits = parseInt(visits) + 1
 	setCookie("counter", visits, now)
-	document.write("这是您第" + visits + "次访问此界面qaq！")
+	//document.write("这是您第" + visits + "次访问此界面qaq！")
