@@ -1,30 +1,39 @@
 <!doctype html>
 <html lang="zh-cmn-Hans">
 	<head>
+		<!--- Gitter --->
 		<script>
 			((window.gitter = {}).chat = {}).options = {
 				room: 'OIer-Meet/community'
 			};
 		</script>
-		<script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+		<!-------------->
+		
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
 		<meta name="renderer" content="webkit"/><!---->
 		<meta name="force-rendering" content="webkit"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		
+		<script src="/static/lib/jquery/jquery.min.js"></script>
+		<script src="/static/lib/jquery-serialize-object/jquery.serialize-object.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/lib/fomantic-ui/dist/semantic.min.css">
+		<script src="/static/lib/fomantic-ui/dist/semantic.min.js"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+
+		<script src="/static/lib/highlight.js/highlight.pack.js"></script>
+		<link rel="stylesheet" type="text/css" href="/static/lib/highlight.js/styles/tomorrow.css">
+		
 		<script type="text/javascript" src="/script/checker.js"></script>
 		<script type="text/javascript" src="/script/drawer.js"></script>
 		<link rel="stylesheet" type="text/css" href="/style/main.css">
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"/>
-		<!-- MDUI CSS Including-->
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
-			integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
-			crossorigin="anonymous"
-		/>
+		
 		<title>OIer-Meet</title>
+		
 		<script language="javascript">
 			function click_search_btn() {
 				var search_province = document.getElementById('meet-province-search').value;
@@ -35,183 +44,157 @@
 			}
 		</script>
 	</head>
+	
+	
 	<body class="mdui-bottom-nav-fixed">
-		<div id="banner" mdui-headroom>
-			<div class="mdui-bottom-nav-fixed">
-				<div class="mdui-toolbar mdui-color-indigo">
-					<a href="javascript:;" class="mdui-typo-title">面基！</a>
-					<div class="mdui-toolbar-spacer"></div>
-					<a href="https://面基.now.sh;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+	
+		<div class="ui borderless menu" style="height: 49px; ">
+			<div class="ui container">
+				<div class="header item">
+					<span style="font-family: 'Exo 2'; font-size: 1.5em; font-weight: 600; ">OIer-meet!</span>
 				</div>
-				<div class="mdui-tab mdui-color-indigo" mdui-tab>
-					<a href="#tab1-province" class="mdui-ripple mdui-ripple-white">
-						<i class="mdui-list-item-icon mdui-icon material-icons">map</i>地区
-					</a>
-					<a href="#tab2-how-con" class="mdui-ripple mdui-ripple-white">
-						<i class="mdui-list-item-icon mdui-icon material-icons">live_help</i>如何贡献
-					</a>
-					<a href="#tab3-contribute" class="mdui-ripple mdui-ripple-white">
-						<i class="mdui-list-item-icon mdui-icon material-icons">library_books</i>贡献列表 
-					</a>
-					<a href="#tab4-update" class="mdui-ripple mdui-ripple-white">
-						<i class="mdui-list-item-icon mdui-icon material-icons">update</i>更新日志 
-					</a>
+				<a class="item" data-tab="province"><i class="map icon"></i>地区</a>
+				<a class="item" data-tab="how-con"<i class="question icon"></i>如何贡献</a>
+				<a class="item" data-tab="contribute"><i class="list icon"></i>贡献列表</a>
+				<a class="item" data-tab="update"><i class="history icon"></i>更新日志</a>
+				<div class="right menu">
 				</div>
 			</div>
 		</div>
-		<div class="mdui-container-fluid">
-			<div id="tab1-province" class="mdui-typo">
-				<p>
-					<a href="/province=安徽" class="mdui-btn mdui-ripple">安徽</a>
-					<a href="/province=北京" class="mdui-btn mdui-ripple">北京</a>
-					<a href="/province=福建" class="mdui-btn mdui-ripple">福建</a>
-					<a href="/province=甘肃" class="mdui-btn mdui-ripple">甘肃</a>
-					<a href="/province=广东" class="mdui-btn mdui-ripple">广东</a>
-					<a href="/province=广西" class="mdui-btn mdui-ripple">广西</a>
-					<a href="/province=贵州" class="mdui-btn mdui-ripple">贵州</a>
-					<a href="/province=海南" class="mdui-btn mdui-ripple">海南</a>
-					<a href="/province=河北" class="mdui-btn mdui-ripple">河北</a>
-					<a href="/province=河南" class="mdui-btn mdui-ripple">河南</a>
-					<a href="/province=黑龙江" class="mdui-btn mdui-ripple">黑龙江</a>
-					<a href="/province=湖北" class="mdui-btn mdui-ripple">湖北</a><br>
-					<a href="/province=湖南" class="mdui-btn mdui-ripple">湖南</a>
-					<a href="/province=吉林" class="mdui-btn mdui-ripple">吉林</a>
-					<a href="/province=江苏" class="mdui-btn mdui-ripple">江苏</a>
-					<a href="/province=江西" class="mdui-btn mdui-ripple">江西</a>
-					<a href="/province=辽宁" class="mdui-btn mdui-ripple">辽宁</a>
-					<a href="/province=内蒙古" class="mdui-btn mdui-ripple">内蒙古</a>
-					<a href="/province=山东" class="mdui-btn mdui-ripple">山东</a>
-					<a href="/province=山西" class="mdui-btn mdui-ripple">山西</a>
-					<a href="/province=陕西" class="mdui-btn mdui-ripple">陕西</a>
-					<a href="/province=上海" class="mdui-btn mdui-ripple">上海</a>
-					<a href="/province=四川" class="mdui-btn mdui-ripple">四川</a>
-					<a href="/province=天津" class="mdui-btn mdui-ripple">天津</a><br>
-					<a href="/province=新疆" class="mdui-btn mdui-ripple">新疆</a>
-					<a href="/province=浙江" class="mdui-btn mdui-ripple">浙江</a>
-					<a href="/province=重庆" class="mdui-btn mdui-ripple">重庆</a>
-					<a href="/province=宁夏" class="mdui-btn mdui-ripple">宁夏</a>
-					<a href="/province=云南" class="mdui-btn mdui-ripple">云南</a>
-					<a href="/province=澳门" class="mdui-btn mdui-ripple">澳门</a>
-					<a href="/province=香港" class="mdui-btn mdui-ripple">香港</a>
-					<a href="/province=青海" class="mdui-btn mdui-ripple">青海</a>
-					<a href="/province=西藏" class="mdui-btn mdui-ripple">西藏</a>
-					<a href="/province=台湾" class="mdui-btn mdui-ripple">台湾</a><br>
-					<blockquote>
-						<p>按照字典序排序，404 说明没数据qaq</p>
-					</blockquote>
-				</p>
-			</div>
-			<div id="tab2-how-con" class="mdui-typo">
-				<p>
-					如果您想贡献数据给 OIer-meet，您可以按照以下格式将数据在右下角的Gitter中发送！<br>
-					也可以在洛谷<strong>同时</strong>私信UID为<code>128369</code>&<code>197881</code>的<strong>两位用户</strong>，以尽快处理，</br>
-					提供数据格式：<strong><code>比赛名称</code>+<code>空格</code>+<code>准考证号（可选）</code>+<code>空格</code>+<code>所在OJ</code>+<code>@</code>+<code>用户名</code>+<code>(uid=</code>+<code>所在OJ的uid</code>+<code>)</code></strong><br>
-					如：<br>
-					<code>CSp2020-S1 BJ-00653 Luogu@Trotyl(uid=128369)</code><br>
-					<code>NOIp1919-pj BJ-00810 Luogu@Trotyl(uid=128369)</code><br>
-					<strong>若未按照此格式提交，概不接受！</strong>
-				</p>
-			</div>
-			<div id="tab3-contribute" class="mdui-typo">
-				<div class="mdui-container">
-					<div class="mdui-row">
-							<div class="mdui-col-sm-6 mdui-col-md-4">
-								<div class="mdui-card">
-									<div class="mdui-card-header">
-										<img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/gh/userunknownx/cdn/Trotyl.jpg"/>
-										<div class="mdui-card-header-title">Trotyl</div>
-										<div class="mdui-card-header-subtitle">AFO</div>
-									</div>
-									<div class="mdui-card-media">
-										<img src="//cdn.w3cbus.com/mdui.org/docs/assets/docs/img/card.jpg"/>
-										<div class="mdui-card-menu">
-										</div>
-									</div>
-									<div class="mdui-card-content">史上最菜 OIer，没有之一，不接受反驳……</div>
-									<div class="mdui-card-actions">
-										<a href="//www.trotyl.cf"><button class="mdui-btn mdui-ripple">homepage</button></a>
-										<a href="https://github.com/TNTtian"><button class="mdui-btn mdui-ripple">github</button></a>
-									</div>
+		
+		<div class="ui tab active container" data-tab="province">
+			<div style="margin-top: 28px; ">
+				<div class="ui main container">
+					<div style="padding-left: 1em; padding-right: 1em; ">
+						<div class="ui two column grid">
+							<div class="two column row">
+								<div class="eleven wide column">
+									<p>
+										<a href="/province=安徽">安徽</a>
+										<a href="/province=北京">北京</a>
+										<a href="/province=福建">福建</a>
+										<a href="/province=甘肃">甘肃</a>
+										<a href="/province=广东">广东</a>
+										<a href="/province=广西">广西</a>
+										<a href="/province=贵州">贵州</a>
+										<a href="/province=海南">海南</a>
+										<a href="/province=河北">河北</a>
+										<a href="/province=河南">河南</a>
+										<a href="/province=黑龙江">黑龙江</a>
+										<a href="/province=湖北">湖北</a><br>
+										<a href="/province=湖南">湖南</a>
+										<a href="/province=吉林">吉林</a>
+										<a href="/province=江苏">江苏</a>
+										<a href="/province=江西">江西</a>
+										<a href="/province=辽宁">辽宁</a>
+										<a href="/province=内蒙古">内蒙古</a>
+										<a href="/province=山东">山东</a>
+										<a href="/province=山西">山西</a>
+										<a href="/province=陕西">陕西</a>
+										<a href="/province=上海">上海</a>
+										<a href="/province=四川">四川</a>
+										<a href="/province=天津">天津</a><br>
+										<a href="/province=新疆">新疆</a>
+										<a href="/province=浙江">浙江</a>
+										<a href="/province=重庆">重庆</a>
+										<a href="/province=宁夏">宁夏</a>
+										<a href="/province=云南">云南</a>
+										<a href="/province=澳门">澳门</a>
+										<a href="/province=香港">香港</a>
+										<a href="/province=青海">青海</a>
+										<a href="/province=西藏">西藏</a>
+										<a href="/province=台湾">台湾</a><br>
+										<blockquote>
+											<p>按照字典序排序，404 说明没数据qaq</p>
+										</blockquote>
+									</p>
 								</div>
-							</div><div class="mdui-col-sm-6 mdui-col-md-4">
-								<div class="mdui-card">
-									<div class="mdui-card-header">
-										<img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/gh/userunknownx/cdn/UserUnknown.jpg"/>
-										<div class="mdui-card-header-title">UserUnknown</div>
-										<div class="mdui-card-header-subtitle">Subtitle</div>
-									</div>
-									<div class="mdui-card-media">
-										<img src="//cdn.w3cbus.com/mdui.org/docs/assets/docs/img/card.jpg"/>
-										<div class="mdui-card-menu">
-										</div>
-									</div>
-									<div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
-									<div class="mdui-card-actions">
-										<a href="http://pathunknown.ml"><button class="mdui-btn mdui-ripple">Blog</button></a>
-									</div>
-								</div>
-							</div><div class="mdui-col-sm-6 mdui-col-md-4">
-								<div class="mdui-card">
-									<div class="mdui-card-header">
-										<img class="mdui-card-header-avatar" src="https://cdn.jsdelivr.net/gh/userunknownx/cdn/jyb666.jpg"/>
-										<div class="mdui-card-header-title">jyb666</div>
-										<div class="mdui-card-header-subtitle">Subtitle</div>
-									</div>
-									<div class="mdui-card-media">
-										<img src="//cdn.w3cbus.com/mdui.org/docs/assets/docs/img/card.jpg"/>
-										<div class="mdui-card-menu">
-										</div>
-									</div>
-									<div class="mdui-card-content">子曰：「学而时习之，不亦说乎？有朋自远方来，不亦乐乎？人不知，而不愠，不亦君子乎？」</div>
-									<div class="mdui-card-actions">
-										<button class="mdui-btn mdui-ripple">action 1</button>
-										<button class="mdui-btn mdui-ripple">action 2</button>
-									</div>
-								</div>
-							</div> 
+							</div>
 						</div>
 					</div>
 				</div>
-				<!---
-					<a href="http://www.trotyl.cf">Trotyl</a><br>
-					<a href="http://www.pathunknown.ml">UserUnknown</a><br>
-					<a href="http://oier.utools.club/">jyb666</a><br>
-				--->
-			</div>
-			<div id="tab4-update" class="mdui-typo"> 
-				<p>
-					<h3>2020</h3>
-					<h4>2020-10-02</h4>
-					<p>制作中：樱花特效开启开关（需要cookie支持）</p>
-					<p>制作中：更新主页样式</p>
-				</p> 
 			</div>
 		</div>
-		<script src="//cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"></script>
-		<!-- MDUI JavaScript Including-->
-		<script
-			src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
-			integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
-			crossorigin="anonymous"
-		></script>
+		
+		<div class="ui tab active container" data-tab="how-con">
+			<div style="margin-top: 28px; ">
+				<div class="ui main container">
+					<div style="padding-left: 1em; padding-right: 1em; ">
+						<div class="ui two column grid">
+							<div class="two column row">
+								<div class="eleven wide column">
+									<p>
+										如果您想贡献数据给 OIer-meet，您可以按照以下格式将数据在右下角的Gitter中发送！<br>
+										也可以在洛谷<strong>同时</strong>私信UID为<code>128369</code>&<code>197881</code>的<strong>两位用户</strong>，以尽快处理，</br>
+										提供数据格式：<strong><code>比赛名称</code>+<code>空格</code>+<code>准考证号（可选）</code>+<code>空格</code>+<code>所在OJ</code>+<code>@</code>+<code>用户名</code>+<code>(uid=</code>+<code>所在OJ的uid</code>+<code>)</code></strong><br>
+										如：<br>
+										<code>CSp2020-S1 BJ-00653 Luogu@Trotyl(uid=128369)</code><br>
+										<code>NOIp1919-pj BJ-00810 Luogu@Trotyl(uid=128369)</code><br>
+										<strong>若未按照此格式提交，概不接受！</strong>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="ui tab active container" data-tab="contribute">
+			<div style="margin-top: 28px; ">
+				<div class="ui main container">
+					<div style="padding-left: 1em; padding-right: 1em; ">
+						<div class="ui two column grid">
+							<div class="two column row">
+								<div class="eleven wide column">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui tab active container" data-tab="update">
+			<div style="margin-top: 28px; ">
+				<div class="ui main container">
+					<div style="padding-left: 1em; padding-right: 1em; ">
+						<div class="ui two column grid">
+							<div class="two column row">
+								<div class="eleven wide column">
+									<p>
+										<h3>2020</h3>
+										<h4>2020-10-02</h4>
+										<p>制作中：樱花特效开启开关（需要cookie支持）</p>
+										<p>制作中：更新主页样式</p>
+									</p> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</body>
+	
+<!-- 	
 	<div class="footer">
-		<!--底栏-->
 		<div class="mdui-bottom-nav mdui-bottom-nav-fixed mdui-bottom-nav-text-auto mdui-bottom-nav-scroll-hide mdui-color-indigo">
 			<p>&copy;Copyright 2020-2020 OIer-Meet.tk</p></br>
 			<a title="qwq"><script type="text/javascript" src="/script/count.js"></script></a>
+			<script>
+				if (visits<=1){
+					swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您继续浏览，则代表您同意此条约（此弹窗仅在您首次访问时出现）", "info");
+				}
+				if (vistits>1){
+					check_sakura();
+				}
+			</script> 
 		</div>
-		<script>
-			if (visits<=1){
-				swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您继续浏览，则代表您同意此条约（此弹窗仅在您首次访问时出现），若您介意公开您的部分信息，请保护好您的数据", "info");
-			}
-			if (vistits>1){
-				check_sakura();
-			}
-		</script>
-	</div> 
-	<!--Button-->
+	</div> -->
 	
+	<!--Button-->
+	<!---
 	<div class="mdui-fab-wrapper" id="fab">
 		<button class="mdui-fab mdui-ripple mdui-color-pink-accent">
 			<i class="mdui-icon material-icons">list</i>
@@ -225,7 +208,7 @@
 			<button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-blue" mdui-tooltip="{content: '赞赏', position: 'left'}" onclick="shang()"><i class="mdui-icon material-icons">attach_money</i>
 			</button>
 			<a href="/"><button class="mdui-fab mdui-fab-mini mdui-ripple mdui-color-red" mdui-tooltip="{content: '返回首页', position: 'left'}"><i class="mdui-icon material-icons">home</i>
-			</button>
+			</button></a>
 			<script>
 				var inst = new mdui.Fab('#fab');
 
@@ -250,4 +233,5 @@
 			</script>
 		</div>
 	</div>
+	--->
 </html>
