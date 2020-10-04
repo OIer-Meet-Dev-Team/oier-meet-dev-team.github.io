@@ -1,102 +1,653 @@
-
 <!DOCTYPE html>
-<html>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="" />
+
+<head>
+
 	<meta charset="utf-8">
-	<head>
-		<link rel="stylesheet" type="text/css" href="/style/main.css">
-		<link rel="stylesheet" type="text/css" href="/style/table.css">
-<!-- 		<script type="text/javascript" src="/script/mouse/fireworks.js"></script> -->
-		<script type="text/javascript" src="/script/sakura.js"></script>
-		<title>OIer-meet</title>
-		<script language="javascript">
-			function click_search_btn() {
-				var search_province = document.getElementById('meet-province-search').value;
-				location.href = "/province="+search_province;
-			}
-		</script>
-	</head>
-	<body>
-		<div class="meet-article">
-			<div class="main">
-				<div class="CSp2020-S1">
-					<h3>CSp2020-S1 浙江</h3>
-					<table class="main-table" border="5">
-						<tr>
-							<th>准考证号</th>
-							<th>OJ来源</th>
-							<th>OJ用户名</th>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-00370</td>
-							<td>Luogu</td>
-							<td>@FDY_ManchesterCity(uid=242193)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-01212</td>
-							<td>Luogu</td>
-							<td>@SUNCHAOYI(uid=183603)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-01216</td>
-							<td>Luogu</td>
-							<td>@AC_WA自动机(uid=151475)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-01849</td>
-							<td>Luogu</td>
-							<td>@CaCl_2(uid=221589)</td>
-						</tr>
-					</table>
-				</div>
-				<div class="CSp2020-J1">
-					<h3>CSp2020-J1 浙江</h3>
-					<table class="main-table" border="5">
-						<tr>
-							<th>准考证号</th>
-							<th>OJ来源</th>
-							<th>OJ用户名</th>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-00933</td>
-							<td>Luogu</td>
-							<td>@FDY_ManchesterCity(uid=242193)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-03081</td>
-							<td>Luogu</td>
-							<td>@SUNCHAOYI(uid=183603)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-03092</td>
-							<td>Luogu</td>
-							<td>@AC_WA自动机(uid=151475)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>ZJ-04724</td>
-							<td>Luogu</td>
-							<td>@CaCl_2(uid=221589)</td>
-						</tr>
-						<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d0e4fe';">
-							<td>没有更多啦</td>
-							<td>没有更多啦</td>
-							<td>没有更多啦</td>
-						</tr>
-					</table>
-				</div>
-				<p>欢迎提供数据！</p>
-				<br>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"/>
+	<meta name="renderer" content="webkit"/><!---->
+	<meta name="force-rendering" content="webkit"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/tomorrow.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/math.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/style.css?20181212" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/morris.js/0.5.1/morris.css" rel="stylesheet">
+	
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/fira-mono.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/lato.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/open-sans.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/exo-2.css" rel="stylesheet">
+	
+	<script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/jquery/3.3.1/jquery.min.js"></script>
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
+	<script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/semantic-ui/2.4.1/semantic.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/script.js?20170710"></script>
+	
+	<link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
+<script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
+
+	<title>OIer meet!</title>
+	
+	<script language="javascript">
+		function click_search_btn() {
+		var search_province = document.getElementById('meet-province-search').value;
+			location.href = "/province="+search_province;
+		}
+		
+		function shang() {
+			swal("谢谢，但","暂不支持赞赏qaq","info");
+		}
+		
+		$(document).ready(() => {
+			$('.ui.checkbox').checkbox();
+			$('.menu .item').tab();
+			$('.button').popup();
+				$('.ui.menu a.item').on('click', function () {
+				$(this)
+					.addClass('active')
+					.siblings()
+					.removeClass('active');
+			});
+		});
+	</script>
+	
+	<!--- Gitter --->
+	<script>
+		((window.gitter = {}).chat = {}).options = {
+			room: 'OIer-Meet/community'
+		};
+	</script>
+</head>
+
+<body>
+	<div class="ui borderless menu" style="height: 49px; ">
+		<div class="ui container">
+			<div class="header item">
+				<span style="font-family: 'Exo 2'; font-size: 1.5em; font-weight: 600; ">OIer meet!</span>
 			</div>
-			<div class="footer">
-				<div class="copyright" align="center">
-					&copy;Copyright 2020 <a href="http://www.trotyl.cf">Trotyl</a>
-				</div>
-				<div class="count" align="center">
-					<small><script type="text/javascript" src="/script/count.js"></script></small>
+			<a class="active item" data-tab="home"><i class="home icon"></i>首页</a>
+			<a class="item" data-tab="province"><i class="map icon"></i>地区</a>
+			<a class="item" data-tab="how-con"><i class="question icon"></i>如何贡献</a>
+			<a class="item" data-tab="contribute"><i class="list icon"></i>贡献列表</a>
+			<a class="item" data-tab="update"><i class="history icon"></i>更新日志</a>
+		</div>
+	</div>
+	<div class="ui tab active container" data-tab="home">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="two column row">
+							<div class="eleven wide column">
+								<div class="ui bottom attached segment">
+									<h1>
+										OIer meet!
+									</h1>
+								</div>
+							</div>
+							<div class="five wide column">
+								<h4 class="ui top attached block header">站内消息</h4>
+								<div class="ui bottom attached segment">
+									<p>北京的数据更新啦！</p> 
+								</div> 
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</body>
-</html>
+	</div>
+	<div class="ui tab container" data-tab="province">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="two column row">
+							<div class="eleven wide column">
+								<div class="ui bottom attached segment">
+									<div class="ui menu" id="province">
+										<a class="item" data-tab="AH">安徽</a>
+										<a class="item" data-tab="BJ">北京</a>
+										<a class="item" data-tab="FJ">福建</a>
+										<a class="item" data-tab="GS">甘肃</a>
+										<a class="item" data-tab="GD">广东</a>
+										<a class="item" data-tab="GX">广西</a>
+										<a class="item" data-tab="GZ">贵州</a>
+										<a class="item" data-tab="HI">海南</a>
+										<a class="item" data-tab="HE">河北</a>
+										<a class="item" data-tab="HA">河南</a>
+									</div>
+									
+									<div class="ui tab container" data-tab="AH">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="BJ">
+										<h2>CSp2020-S1</h2> 
+										<table class="ui celled padded table">
+											<thead>
+												<tr>
+													<th class="single line">准考证号</th>
+													<th>OJ来源</th>
+													<th>OJ用户名</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>BJ-00023</td>
+													<td>Luogu</td>
+													<td>@rui_er(uid=122461)</td>
+												</tr>
+												<tr>
+													<td>BJ-00423</td>
+													<td>Luogu</td>
+													<td>@longer_name(uid=95103)</td>
+												</tr>
+												<tr>
+													<td>BJ-00076</td>
+													<td>Luogu</td>
+													<td>@devout(uid=97344)</td>
+												</tr>
+												<tr>
+													<td>BJ-00104</td>
+													<td>Luogu</td>
+													<td>@一只书虫仔(uid=114914)</td>
+												</tr>
+												<tr>
+													<td>BJ-00368</td>
+													<td>Luogu</td>
+													<td>@Miracle_Creator(uid=223797)</td>
+												</tr>
+												<tr>
+													<td>BJ-00653</td>
+													<td>Luogu</td>
+													<td>@Trotyl(uid=128369)</td>
+												</tr>
+												<tr>
+													<td>BJ-00654</td>
+													<td>Luogu</td>
+													<td>@我爱Chtholly(uid=372299)</td>
+												</tr>
+												<tr>
+													<td>BJ-00809</td>
+													<td>Luogu</td>
+													<td>@Zephyr_(uid=91127)</td>
+												</tr>
+												<tr>
+													<td>BJ-00840</td>
+													<td>Luogu</td>
+													<td>@monsters谔谔(uid=191868)</td>
+												</tr>
+												<tr>
+													<td>没有更多啦</td>
+													<td>没有更多啦</td>
+													<td>没有更多啦</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									
+									<div class="ui tab container" data-tab="FJ">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="GS">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="GD">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="GX">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="GZ">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="HI">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="HE">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="HA">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									
+									<div class="ui menu" id="province">
+										<a class="item" data-tab="HL">黑龙江</a>
+										<a class="item" data-tab="HB">湖北</a>
+										<a class="item" data-tab="HN">湖南</a>
+										<a class="item" data-tab="JL">吉林</a>
+										<a class="item" data-tab="JS">江苏</a>
+										<a class="item" data-tab="JX">江西</a>
+										<a class="item" data-tab="LN">辽宁</a>
+										<a class="item" data-tab="IM">内蒙古</a>
+										<a class="item" data-tab="SD">山东</a>
+										<a class="item" data-tab="SX">山西</a>
+									</div>
+									
+									<div class="ui tab container" data-tab="HL">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="HB">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="HN">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="JL">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="JS">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="JX">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="LN">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="IM">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="SD">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="SX">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									
+									<div class="ui menu" id="province">
+										<a class="item" data-tab="SN">陕西</a>
+										<a class="item" data-tab="SH">上海</a>
+										<a class="item" data-tab="SC">四川</a>
+										<a class="item" data-tab="TJ">天津</a>
+										<a class="item" data-tab="XJ">新疆</a>
+										<a class="item" data-tab="ZJ">浙江</a>
+										<a class="item" data-tab="CQ">重庆</a>
+										<a class="item" data-tab="NX">宁夏</a>
+										<a class="item" data-tab="YN">云南</a>
+										<a class="item" data-tab="MO">澳门</a>
+									</div>
+									
+									<div class="ui tab container" data-tab="SN">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="SH">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="SC">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="TJ">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="XJ">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="ZJ">
+										<h2>CSp2020-S1</h2>
+										<table class="ui celled padded table">
+											<thead>
+												<tr>
+													<th class="single line">准考证号</th>
+													<th>OJ来源</th>
+													<th>OJ用户名</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>ZJ-00370</td>
+													<td>Luogu</td>
+													<td>@FDY_ManchesterCity(uid=242193)</td>
+												</tr>
+												<tr>
+													<td>ZJ-01212</td>
+													<td>Luogu</td>
+													<td>@SUNCHAOYI(uid=183603)</td>
+												</tr>
+												<tr>
+													<td>ZJ-01216</td>
+													<td>Luogu</td>
+													<td>@AC_WA自动机(uid=151475)</td>
+												</tr>
+												<tr>
+													<td>ZJ-01849</td>
+													<td>Luogu</td>
+													<td>@CaCl_2(uid=221589)</td>
+												</tr>
+												<tr>
+													<td>ZJ-01916</td>
+													<td>Luogu</td>
+													<td>@shygo_cmll02(uid=171487)</td>
+												</tr>
+												<tr>
+													<td>ZJ-00243</td>
+													<td>Luogu</td>
+													<td>@pikabi(uid=209604)</td>
+												</tr>
+												<tr>
+													<td>ZJ-02016</td>
+													<td>Luogu</td>
+													<td>@AnCdesu(uid=39062)</td>
+												</tr>
+												<tr>
+													<td>ZJ-01134</td>
+													<td>Luogu</td>
+													<td>@Rainbow_sjy❤OI(uid=151935)</td>
+												</tr> 
+											</tbody>
+										</table>
+										
+										<h2>CSp2020-J1</h2>
+										<table class="ui celled padded table">
+											<thead>
+												<tr>
+													<th class="single line">准考证号</th>
+													<th>OJ来源</th>
+													<th>OJ用户名</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>ZJ-00933</td>
+													<td>Luogu</td>
+													<td>@FDY_ManchesterCity(uid=242193)</td>
+												</tr>
+												<tr>
+													<td>ZJ-03081</td>
+													<td>Luogu</td>
+													<td>@SUNCHAOYI(uid=183603)</td>
+												</tr>
+												<tr>
+													<td>ZJ-03092</td>
+													<td>Luogu</td>
+													<td>@AC_WA自动机(uid=151475)</td>
+												</tr>
+												<tr>
+													<td>ZJ-04724</td>
+													<td>Luogu</td>
+													<td>@CaCl_2(uid=221589)</td>
+												</tr>
+												<tr>
+													<td>ZJ-04924</td>
+													<td>Luogu</td>
+													<td>shygo_cmll02(uid=171487)</td>
+												</tr>
+												<tr>
+													<td>ZJ-05203</td>
+													<td>Luogu</td>
+													<td>AnCdesu(uid=39062)</td>
+												</tr>
+												<tr>
+													<td>没有更多啦</td>
+													<td>没有更多啦</td>
+													<td>没有更多啦</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									
+									<div class="ui tab container" data-tab="CQ">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="NX">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="YN">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="MO">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									
+									<div class="ui menu" id="province">
+										<a class="item" data-tab="HK">香港</a>
+										<a class="item" data-tab="QH">青海</a>
+										<a class="item" data-tab="XZ">西藏</a>
+										<a class="item" data-tab="TW">台湾</a>
+									</div>
+									
+									<div class="ui tab container" data-tab="HK">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="QH">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="XZ">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+									
+									<div class="ui tab container" data-tab="TW">
+										<blockquote>
+											<p>暂无数据qaq</p>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ui tab container" data-tab="how-con">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="two column row">
+							<div class="eleven wide column">
+								<div class="ui bottom attached segment">
+									<p>
+										如果您想贡献数据给 OIer-meet，您可以按照以下格式将数据在右下角的Gitter中发送！<br>
+										也可以在洛谷<strong>同时</strong>私信UID为<code>128369</code>&<code>197881</code>的<strong>两位用户</strong>，以尽快处理，</br>
+										提供数据格式：<strong><code>比赛名称</code>+<code>空格</code>+<code>准考证号（可选）</code>+<code>空格</code>+<code>所在OJ</code>+<code>@</code>+<code>用户名</code>+<code>(uid=</code>+<code>所在OJ的uid</code>+<code>)</code></strong><br>
+										如：<br>
+										<code>CSp2020-S1 BJ-00653 Luogu@Trotyl(uid=128369)</code><br>
+										<code>NOIp1919-pj BJ-00810 Luogu@Trotyl(uid=128369)</code><br>
+										<strong>若未按照此格式提交，概不接受！</strong>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ui tab container" data-tab="contribute">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="two column row">
+							<div class="eleven wide column">
+								<div class="ui bottom attached segment">
+								
+									<div class="ui cards">
+										<div class="card">
+											<div class="content">
+												<img class="right floated mini ui image" src="/">
+												<div class="header">Trotyl </div>
+												<div class="meta">Founder </div>
+												<div class="description">这个人很懒，他什么也没有写 </div>
+											</div>
+											<div class="extra content">
+												<div class="ui two buttons">
+													<div class="ui basic button">
+														<a href="https://www.trotyl.cf">Homepage</a>
+													</div>
+													<div class="ui basic button">
+														<a href="mailto:Trotyl-tnt@yandex.com">Email</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="card">
+											<div class="content">
+												<img class="right floated mini ui image" src="/">
+												<div class="header">UserUnknown </div>
+												<div class="meta">Contributor </div>
+												<div class="description">这个人很懒，他什么也没有写 </div>
+											</div>
+											<div class="extra content">
+												<div class="ui two buttons">
+													<div class="ui basic button">
+														<a href="/">button 1</a>
+													</div>
+													<div class="ui basic button">
+														<a href="/">button 2</a>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<div class="card">
+											<div class="content">
+												<img class="right floated mini ui image" src="/">
+												<div class="header">jyb666 </div>
+												<div class="meta">Contributor </div>
+												<div class="description">这个人很懒，他什么也没有写 </div>
+											</div>
+											<div class="extra content">
+												<div class="ui two buttons">
+													<div class="ui basic button">
+														<a href="/">button 1</a>
+													</div>
+													<div class="ui basic button">
+														<a href="/">button 2</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ui tab container" data-tab="update">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="two column row">
+							<div class="eleven wide column">
+								<div class="ui bottom attached segment">
+									<p>
+										<h3>2020</h3>
+										<h4>2020-10-02</h4>
+										<p>制作中：樱花特效开启开关（需要cookie支持）</p>
+										<p>制作中：更新主页样式</p>
+									</p> 
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
