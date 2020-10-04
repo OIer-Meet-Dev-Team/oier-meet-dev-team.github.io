@@ -30,7 +30,7 @@
 		
 		<script type="text/javascript" src="/script/checker.js"></script>
 		<script type="text/javascript" src="/script/drawer.js"></script>
-<!-- 		<link rel="stylesheet" type="text/css" href="/style/main.css"> -->
+		<link rel="stylesheet" type="text/css" href="/style/main.css">
 		
 		<title>OIer-Meet</title>
 		
@@ -51,123 +51,28 @@
 		<div class="ui borderless menu" style="height: 49px; ">
 			<div class="ui container">
 				<div class="header item">
-					<span style="font-family: 'Exo 2'; font-size: 1.5em; font-weight: 600; ">OIer-meet!</span>
+					<span style="font-family: 'Exo 2'; font-size: 1.5em; font-weight: 600; ">OIer meet!</span>
 				</div>
-				<a class="item" data-tab="province"><i class="map icon"></i>地区</a>
-				<a class="item" data-tab="how-con"<i class="question icon"></i>如何贡献</a>
-				<a class="item" data-tab="contribute"><i class="list icon"></i>贡献列表</a>
-				<a class="item" data-tab="update"><i class="history icon"></i>更新日志</a>
+				<a class="item active" href="/"><i class="home icon"></i>首页</a>
+				<a class="item" href="/province"><i class="map icon"></i>地区</a>
+				<a class="item" href="/how-con"<i class="question icon"></i>如何贡献</a>
+				<a class="item" href="/contribute"><i class="list icon"></i>贡献列表</a>
+				<a class="item" href="/update"><i class="history icon"></i>更新日志</a>
 				<div class="right menu">
 				</div>
 			</div>
 		</div>
 		
-		<div class="ui tab active container" data-tab="province">
+		<div class="ui tab active container">
 			<div style="margin-top: 28px; ">
 				<div class="ui main container">
 					<div style="padding-left: 1em; padding-right: 1em; ">
 						<div class="ui two column grid">
 							<div class="two column row">
 								<div class="eleven wide column">
-									<p>
-										<a href="/province=安徽">安徽</a>
-										<a href="/province=北京">北京</a>
-										<a href="/province=福建">福建</a>
-										<a href="/province=甘肃">甘肃</a>
-										<a href="/province=广东">广东</a>
-										<a href="/province=广西">广西</a>
-										<a href="/province=贵州">贵州</a>
-										<a href="/province=海南">海南</a>
-										<a href="/province=河北">河北</a>
-										<a href="/province=河南">河南</a>
-										<a href="/province=黑龙江">黑龙江</a>
-										<a href="/province=湖北">湖北</a><br>
-										<a href="/province=湖南">湖南</a>
-										<a href="/province=吉林">吉林</a>
-										<a href="/province=江苏">江苏</a>
-										<a href="/province=江西">江西</a>
-										<a href="/province=辽宁">辽宁</a>
-										<a href="/province=内蒙古">内蒙古</a>
-										<a href="/province=山东">山东</a>
-										<a href="/province=山西">山西</a>
-										<a href="/province=陕西">陕西</a>
-										<a href="/province=上海">上海</a>
-										<a href="/province=四川">四川</a>
-										<a href="/province=天津">天津</a><br>
-										<a href="/province=新疆">新疆</a>
-										<a href="/province=浙江">浙江</a>
-										<a href="/province=重庆">重庆</a>
-										<a href="/province=宁夏">宁夏</a>
-										<a href="/province=云南">云南</a>
-										<a href="/province=澳门">澳门</a>
-										<a href="/province=香港">香港</a>
-										<a href="/province=青海">青海</a>
-										<a href="/province=西藏">西藏</a>
-										<a href="/province=台湾">台湾</a><br>
-										<blockquote>
-											<p>按照字典序排序，404 说明没数据qaq</p>
-										</blockquote>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="ui tab active container" data-tab="how-con">
-			<div style="margin-top: 28px; ">
-				<div class="ui main container">
-					<div style="padding-left: 1em; padding-right: 1em; ">
-						<div class="ui two column grid">
-							<div class="two column row">
-								<div class="eleven wide column">
-									<p>
-										如果您想贡献数据给 OIer-meet，您可以按照以下格式将数据在右下角的Gitter中发送！<br>
-										也可以在洛谷<strong>同时</strong>私信UID为<code>128369</code>&<code>197881</code>的<strong>两位用户</strong>，以尽快处理，</br>
-										提供数据格式：<strong><code>比赛名称</code>+<code>空格</code>+<code>准考证号（可选）</code>+<code>空格</code>+<code>所在OJ</code>+<code>@</code>+<code>用户名</code>+<code>(uid=</code>+<code>所在OJ的uid</code>+<code>)</code></strong><br>
-										如：<br>
-										<code>CSp2020-S1 BJ-00653 Luogu@Trotyl(uid=128369)</code><br>
-										<code>NOIp1919-pj BJ-00810 Luogu@Trotyl(uid=128369)</code><br>
-										<strong>若未按照此格式提交，概不接受！</strong>
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="ui tab active container" data-tab="contribute">
-			<div style="margin-top: 28px; ">
-				<div class="ui main container">
-					<div style="padding-left: 1em; padding-right: 1em; ">
-						<div class="ui two column grid">
-							<div class="two column row">
-								<div class="eleven wide column">
-									
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="ui tab active container" data-tab="update">
-			<div style="margin-top: 28px; ">
-				<div class="ui main container">
-					<div style="padding-left: 1em; padding-right: 1em; ">
-						<div class="ui two column grid">
-							<div class="two column row">
-								<div class="eleven wide column">
-									<p>
-										<h3>2020</h3>
-										<h4>2020-10-02</h4>
-										<p>制作中：樱花特效开启开关（需要cookie支持）</p>
-										<p>制作中：更新主页样式</p>
-									</p> 
+									<h1>
+										欢迎来到 OIer meet! 
+									</h1>
 								</div>
 							</div>
 						</div>
