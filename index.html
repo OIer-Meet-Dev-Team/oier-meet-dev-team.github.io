@@ -38,8 +38,8 @@
 	<script src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/script.js?20170710"></script>
 	
 	<link href="http://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
-<script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script>
-<script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
+	<script src="http://cdn.staticfile.org/jquery/2.1.0/jquery.min.js"></script>
+	<script src="http://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
 
 	<title>OIer meet!</title>
 	
@@ -112,6 +112,28 @@
 								</div>
 							</div>
 							<div class="right floated five wide column">
+								<h4 class="ui top attached block header"><i class="ui quote left icon"></i>一言（ヒトコト）</h4>
+								<div class="ui bottom attached center aligned segment">
+									<div style="font-size: 1em; line-height: 1.5em;" id="hitokoto-content"> </div>
+									<div style="text-align: right; margin-top: 10px; font-size: 0.9em;" id="hitokoto-from"> </div>
+									<!--<script src="https://cdn.jsdelivr.net/npm/bluebird@3/js/browser/bluebird.min.js"></script>-->
+									<script src="https://cdn.jsdelivr.net/npm/whatwg-fetch@2.0.3/fetch.min.js"></script>
+									<script>
+										fetch('https://v1.hitokoto.cn/?c=a')
+										.then(function (res){
+												return res.json();
+											})
+											.then(function (data) {
+												var h_content = document.getElementById('hitokoto-content');
+												var h_from = document.getElementById('hitokoto-from');
+												h_content.innerText = data.hitokoto; 
+												h_from.innerText = "——" + data.from; 
+											})
+											.catch(function (err) {
+												console.error(err);
+											})
+									</script>
+								</div>
 								<h4 class="ui top attached block header"><i class="bullhorn icon"></i>最近更新</h4>
 								<div class="ui bottom attached segment">
 									<h4>20-10-5</h4>
