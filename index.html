@@ -31,7 +31,6 @@
 	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/google-fonts/exo-2.css" rel="stylesheet">
 	
 	<script data-cfasync="false" src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/jquery/3.3.1/jquery.min.js"></script>
-	
 
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
@@ -42,6 +41,8 @@
 	<link href="https://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="/script/jquery-3.1.1.min.js"></script>
 	<script src="https://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
+	
+	<script src="/script/ui.js"></script>
 
 	<title>OIer meet!</title>
 	
@@ -55,17 +56,6 @@
 			swal("谢谢，但","暂不支持赞赏qaq","info");
 		}
 		
-		$(document).ready(() => {
-			$('.ui.checkbox').checkbox();
-			$('.menu .item').tab();
-			$('.button').popup();
-				$('.ui.menu a.item').on('click', function () {
-				$(this)
-					.addClass('active')
-					.siblings()
-					.removeClass('active');
-			});
-		});
 	</script>
 	
 	<!--- Gitter --->
@@ -204,405 +194,23 @@
 						<div class="two column row">
 							<div class="eleven wide column">
 								<div class="ui bottom attached segment">
-									<div class="ui menu" id="province">
-										<a class="item" data-tab="AH">安徽</a>
-										<a class="item" data-tab="BJ">北京</a>
-										<a class="item" data-tab="FJ">福建</a>
-										<a class="item" data-tab="GS">甘肃</a>
-										<a class="item" data-tab="GD">广东</a>
-										<a class="item" data-tab="GX">广西</a>
-										<a class="item" data-tab="GZ">贵州</a>
-										<a class="item" data-tab="HI">海南</a>
-										<a class="item" data-tab="HE">河北</a>
-										<a class="item" data-tab="HA">河南</a>
+								
+									<div class="ui styled fluid accordion">
+										<div class="active title"><i class="dropdown icon"></i> BJ </div>
+										<div class="active content">
+											<p>狗算是一种家畜。以其忠诚与忠心广受人类欢迎, 可以在世界各地的许多家庭里发现这个受欢迎的客人。</p>
+										</div>
+										<div class="title"><i class="dropdown icon"></i> What kinds of dogs are there? </div>
+										<div class="content">
+											<p>狗有许多品种，每个品种都有不同的大小及性格，饲主通常选择适合自己生活方式的品种当作自已的伙伴，其中最受欢迎的品种绝对是吉娃娃。</p>
+										</div>
+										<div class="title"><i class="dropdown icon"></i> How do you acquire a dog? </div>
+										<div class="content">
+											<p>通常有三种方式可以取得一只狗狗，宠物店、私人饲主或是动物之家。 (请以领养代替购买)</p>
+											<p>你可以在动物之家内领养一只健康的小狗，比起在宠物店买，收容所中的宠物比较不容易有近亲交配出现的缺陷问题，而且领养一只小狗的费用远比你在宠物店中购买便宜得多。</p>
+										</div>
 									</div>
-									
-									<div class="ui tab container" data-tab="AH">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="BJ">
-										<h2>CSp2020-S1</h2> 
-										<table class="ui celled padded table">
-											<thead>
-												<tr>
-													<th class="single line">准考证号</th>
-													<th>OJ来源</th>
-													<th>OJ用户名</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>BJ-00023</td>
-													<td>Luogu</td>
-													<td>@rui_er(uid=122461)</td>
-												</tr>
-												<tr>
-													<td>BJ-00423</td>
-													<td>Luogu</td>
-													<td>@longer_name(uid=95103)</td>
-												</tr>
-												<tr>
-													<td>BJ-00076</td>
-													<td>Luogu</td>
-													<td>@devout(uid=97344)</td>
-												</tr>
-												<tr>
-													<td>BJ-00104</td>
-													<td>Luogu</td>
-													<td>@一只书虫仔(uid=114914)</td>
-												</tr>
-												<tr>
-													<td>BJ-00368</td>
-													<td>Luogu</td>
-													<td>@Miracle_Creator(uid=223797)</td>
-												</tr>
-												<tr>
-													<td>BJ-00653</td>
-													<td>Luogu</td>
-													<td>@Trotyl(uid=128369)</td>
-												</tr>
-												<tr>
-													<td>BJ-00654</td>
-													<td>Luogu</td>
-													<td>@我爱Chtholly(uid=372299)</td>
-												</tr>
-												<tr>
-													<td>BJ-00809</td>
-													<td>Luogu</td>
-													<td>@Zephyr_(uid=91127)</td>
-												</tr>
-												<tr>
-													<td>BJ-00840</td>
-													<td>Luogu</td>
-													<td>@monsters谔谔(uid=191868)</td>
-												</tr>
-												
-											</tbody>
-										</table>
-									</div>
-									
-									<div class="ui tab container" data-tab="FJ">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="GS">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="GD">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="GX">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="GZ">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="HI">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="HE">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="HA">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									
-									<div class="ui menu" id="province">
-										<a class="item" data-tab="HL">黑龙江</a>
-										<a class="item" data-tab="HB">湖北</a>
-										<a class="item" data-tab="HN">湖南</a>
-										<a class="item" data-tab="JL">吉林</a>
-										<a class="item" data-tab="JS">江苏</a>
-										<a class="item" data-tab="JX">江西</a>
-										<a class="item" data-tab="LN">辽宁</a>
-										<a class="item" data-tab="IM">内蒙古</a>
-										<a class="item" data-tab="SD">山东</a>
-										<a class="item" data-tab="SX">山西</a>
-									</div>
-									
-									<div class="ui tab container" data-tab="HL">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="HB">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="HN">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="JL">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="JS">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="JX">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="LN">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="IM">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="SD">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="SX">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									
-									<div class="ui menu" id="province">
-										<a class="item" data-tab="SN">陕西</a>
-										<a class="item" data-tab="SH">上海</a>
-										<a class="item" data-tab="SC">四川</a>
-										<a class="item" data-tab="TJ">天津</a>
-										<a class="item" data-tab="XJ">新疆</a>
-										<a class="item" data-tab="ZJ">浙江</a>
-										<a class="item" data-tab="CQ">重庆</a>
-										<a class="item" data-tab="NX">宁夏</a>
-										<a class="item" data-tab="YN">云南</a>
-										<a class="item" data-tab="MO">澳门</a>
-									</div>
-									
-									<div class="ui tab container" data-tab="SN">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="SH">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="SC">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="TJ">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="XJ">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="ZJ">
-										<h2>CSp2020-S1</h2>
-										<table class="ui celled padded table">
-											<thead>
-												<tr>
-													<th class="single line">准考证号</th>
-													<th>OJ来源</th>
-													<th>OJ用户名</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>ZJ-00370</td>
-													<td>Luogu</td>
-													<td>@FDY_ManchesterCity(uid=242193)</td>
-												</tr>
-												<tr>
-													<td>ZJ-01212</td>
-													<td>Luogu</td>
-													<td>@SUNCHAOYI(uid=183603)</td>
-												</tr>
-												<tr>
-													<td>ZJ-01216</td>
-													<td>Luogu</td>
-													<td>@AC_WA自动机(uid=151475)</td>
-												</tr>
-												<tr>
-													<td>ZJ-01849</td>
-													<td>Luogu</td>
-													<td>@CaCl_2(uid=221589)</td>
-												</tr>
-												<tr>
-													<td>ZJ-01916</td>
-													<td>Luogu</td>
-													<td>@shygo_cmll02(uid=171487)</td>
-												</tr>
-												<tr>
-													<td>ZJ-00243</td>
-													<td>Luogu</td>
-													<td>@pikabi(uid=209604)</td>
-												</tr>
-												<tr>
-													<td>ZJ-02016</td>
-													<td>Luogu</td>
-													<td>@AnCdesu(uid=39062)</td>
-												</tr>
-												<tr>
-													<td>ZJ-01134</td>
-													<td>Luogu</td>
-													<td>@Rainbow_sjy❤OI(uid=151935)</td>
-												</tr> 
-											</tbody>
-										</table>
-										
-										<h2>CSp2020-J1</h2>
-										<table class="ui celled padded table">
-											<thead>
-												<tr>
-													<th class="single line">准考证号</th>
-													<th>OJ来源</th>
-													<th>OJ用户名</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>ZJ-00933</td>
-													<td>Luogu</td>
-													<td>@FDY_ManchesterCity(uid=242193)</td>
-												</tr>
-												<tr>
-													<td>ZJ-03081</td>
-													<td>Luogu</td>
-													<td>@SUNCHAOYI(uid=183603)</td>
-												</tr>
-												<tr>
-													<td>ZJ-03092</td>
-													<td>Luogu</td>
-													<td>@AC_WA自动机(uid=151475)</td>
-												</tr>
-												<tr>
-													<td>ZJ-04724</td>
-													<td>Luogu</td>
-													<td>@CaCl_2(uid=221589)</td>
-												</tr>
-												<tr>
-													<td>ZJ-04924</td>
-													<td>Luogu</td>
-													<td>shygo_cmll02(uid=171487)</td>
-												</tr>
-												<tr>
-													<td>ZJ-05203</td>
-													<td>Luogu</td>
-													<td>AnCdesu(uid=39062)</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-									
-									<div class="ui tab container" data-tab="CQ">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="NX">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="YN">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="MO">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									
-									<div class="ui menu" id="province">
-										<a class="item" data-tab="HK">香港</a>
-										<a class="item" data-tab="QH">青海</a>
-										<a class="item" data-tab="XZ">西藏</a>
-										<a class="item" data-tab="TW">台湾</a>
-									</div>
-									
-									<div class="ui tab container" data-tab="HK">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="QH">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="XZ">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
-									
-									<div class="ui tab container" data-tab="TW">
-										<blockquote>
-											<p>暂无数据qaq</p>
-										</blockquote>
-									</div>
+
 								</div>
 							</div>
 						</div>
