@@ -16,7 +16,7 @@
 	<meta name="renderer" content="webkit"/><!---->
 	<meta name="force-rendering" content="webkit"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	
+
 	<link href="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/cdnjs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet">
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert"></script>
 	<script type="text/javascript" src="/script/count.js"></script>
@@ -39,6 +39,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/syzoj-public-cdn@1.0.6/self/script.js?20170710"></script>
 	
 	<link href="https://cdn.staticfile.org/emoji/0.2.2/emoji.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="/script/jquery-3.1.1.min.js"></script>
 	<script src="https://cdn.staticfile.org/emoji/0.2.2/emoji.js"></script>
 
 	<title>OIer meet!</title>
@@ -54,30 +55,12 @@
 		}
 		
 	</script>
+	
+	<!--- Gitter --->
 	<script>
-	$(document).ready(() => {
-		$('.ui.checkbox').checkbox();
-		$('.menu .item').tab();
-		$('.button').popup();
-			$('.ui.menu a.item').on('click', function () {
-			$(this)
-				.addClass('active')
-				.siblings()
-				.removeClass('active');
-		});
-	});
-
-	$('.ui.accordion')
-		.accordion()
-	;
-	$('.trigger.example .accordion')
-		.accordion({
-			selector: {
-				trigger: '.title .icon'
-			}
-		})
-	;
-	$('.ui.accordion').accordion('refresh');
+		((window.gitter = {}).chat = {}).options = {
+			room: 'OIer-Meet/community'
+		};
 	</script>
 </head>
 
@@ -91,7 +74,7 @@
 			<a class="item" data-tab="province"><i class="map icon"></i>地区</a>
 			<a class="item" data-tab="how-con"><i class="question icon"></i>如何贡献</a>
 			<a class="item" data-tab="contribute"><i class="list icon"></i>贡献列表</a>
-			<a class="item" data-tab="update"><i class="history icon"></i>更新日志</a>
+			<a class="item" data-tab="history icon"></i>更新日志</a>
 			<a class="item" href="https://www.oier-meet.tk">Github线路</a>
 			<a class="item" href="https://2.oier-meet.tk">较快线路</a>
 		</div>
@@ -209,9 +192,40 @@
 						<div class="two column row">
 							<div class="eleven wide column">
 								<div class="ui bottom attached segment">
-									<!--<script src="/script/ui.js"></script>-->
+								
 									<div class="ui styled fluid accordion">
-										<div class="title"><i class="dropdown icon"></i> BJ </div>
+										<!---<script src="https://www.oier-meet.tk/script/ui.js"></script>--->
+										<script>
+											$(document).ready(() => {
+												$('.ui.checkbox').checkbox();
+												$('.menu .item').tab();
+												$('.button').popup();
+													$('.ui.menu a.item').on('click', function () {
+													$(this)
+														.addClass('active')
+														.siblings()
+														.removeClass('active');
+												});
+											});
+													
+											$('.ui.accordion')
+												.accordion()
+											;
+											$('.trigger.example .accordion')
+												.accordion({
+													selector: {
+														trigger: '.title .icon'
+													}
+												})
+											;
+											$('.ui.accordion').accordion('refresh');
+										</script>
+										<div class="title"><i class="dropdown icon"></i> AH 安徽</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> BJ 北京</div>
 										<div class="content">
 											<h2>CSp2020-S1</h2> 
 											<table class="ui celled padded table">
@@ -271,6 +285,259 @@
 													
 												</tbody>
 											</table>
+										</div>
+										<div class="title"><i class="dropdown icon"></i> FJ 福建</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> GS 甘肃</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> GD 广东</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> GX 广西</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> GZ 贵州</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HI 海南</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HE 河北</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HA 河南</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HL 黑龙江</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HB 湖北</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HN 湖南</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> JL 吉林</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> JS 江苏</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> JX 江西</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> LN 辽宁</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> IM 内蒙古</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> SD 山东</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> SX 山西</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> SN 陕西</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> SH 上海</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> SC 四川</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> TJ 天津</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> XJ 新疆</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> ZJ 浙江</div>
+										<div class="content">
+											<h2>CSp2020-J1</h2>
+											<table class="ui celled padded table">
+												<thead>
+													<tr>
+														<th class="single line">准考证号</th>
+														<th>OJ来源</th>
+														<th>OJ用户名</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>ZJ-00933</td>
+														<td>Luogu</td>
+														<td>@FDY_ManchesterCity(uid=242193)</td>
+													</tr>
+													<tr>
+														<td>ZJ-03081</td>
+														<td>Luogu</td>
+														<td>@SUNCHAOYI(uid=183603)</td>
+													</tr>
+													<tr>
+														<td>ZJ-03092</td>
+														<td>Luogu</td>
+														<td>@AC_WA自动机(uid=151475)</td>
+													</tr>
+													<tr>
+														<td>ZJ-04724</td>
+														<td>Luogu</td>
+														<td>@CaCl_2(uid=221589)</td>
+													</tr>
+													<tr>
+														<td>ZJ-04924</td>
+														<td>Luogu</td>
+														<td>shygo_cmll02(uid=171487)</td>
+													</tr>
+													<tr>
+														<td>ZJ-05203</td>
+														<td>Luogu</td>
+														<td>AnCdesu(uid=39062)</td>
+													</tr>
+												</tbody>
+											</table>
+											
+											<h2>CSp2020-S1</h2>
+											<table class="ui celled padded table">
+												<thead>
+													<tr>
+														<th class="single line">准考证号</th>
+														<th>OJ来源</th>
+														<th>OJ用户名</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>ZJ-00370</td>
+														<td>Luogu</td>
+														<td>@FDY_ManchesterCity(uid=242193)</td>
+													</tr>
+													<tr>
+														<td>ZJ-01212</td>
+														<td>Luogu</td>
+														<td>@SUNCHAOYI(uid=183603)</td>
+													</tr>
+													<tr>
+														<td>ZJ-01216</td>
+														<td>Luogu</td>
+														<td>@AC_WA自动机(uid=151475)</td>
+													</tr>
+													<tr>
+														<td>ZJ-01849</td>
+														<td>Luogu</td>
+														<td>@CaCl_2(uid=221589)</td>
+													</tr>
+													<tr>
+														<td>ZJ-01916</td>
+														<td>Luogu</td>
+														<td>@shygo_cmll02(uid=171487)</td>
+													</tr>
+													<tr>
+														<td>ZJ-00243</td>
+														<td>Luogu</td>
+														<td>@pikabi(uid=209604)</td>
+													</tr>
+													<tr>
+														<td>ZJ-02016</td>
+														<td>Luogu</td>
+														<td>@AnCdesu(uid=39062)</td>
+													</tr>
+													<tr>
+														<td>ZJ-01134</td>
+														<td>Luogu</td>
+														<td>@Rainbow_sjy?OI(uid=151935)</td>
+													</tr> 
+												</tbody>
+											</table>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> CQ 重庆</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> NX 宁夏</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> YN 云南</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> MO 澳门</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> HK 香港</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> QH 青海</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> XZ 西藏</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
+										</div>
+										
+										<div class="title"><i class="dropdown icon"></i> TW 台湾</div>
+										<div class="content">
+											<p>暂无数据qaq</p>
 										</div>
 									</div>
 									
@@ -397,6 +664,8 @@
 										<h4>2020-10-04</h4>
 										<p>更改主页样式，将地区等放到一个页面，更改 UI</p>
 										<p>增加统计数据</p>
+										<h4>2020-10-06</h4>
+										<p>更新城市列表</p> 
 									</p> 
 								</div>
 							</div>
@@ -410,8 +679,8 @@
 <div class="ui vertical footer segment" style="margin-top: 15px; ">
 	<div class="ui center aligned container">
 		<span style="color: #999;">
-			&copy; 2020-2020 <a title="Join Us!" href="https://github.com/OIer-Meet-Dev-Team/" target="_blank">OIer Meet! Dev Team</a>.<br>
-			<center><div align='center'><a href='https://www.hit-counts.com/'><img src='https://www.hit-counts.com/counter.php?t=MTQ1MjE5OA==' border='0'></a></div></center>
+			&copy; 2020-2020 <a title="Join Us!" href="https://github.com/OIer-Meet-Dev-Team/" target="_blank OIer Meet! Dev Team</a>.<br>
+			<center><div align='center'><a href='https://www.hit-counts.com/'><img src='http://www.hit-counts.com/counter.php?t=MTQ1MjE5OA==' border='0'></a></div></center>
 		</span>
 		
  	</div>
