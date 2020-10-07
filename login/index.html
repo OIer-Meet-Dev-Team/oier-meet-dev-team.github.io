@@ -62,6 +62,19 @@
 			swal("谢谢，但","暂不支持赞赏qaq","info");
 		}
 		
+		$(document).ready(() => {
+			$('.ui.checkbox').checkbox();
+			$('.menu .item').tab();
+			$('.button').popup();
+
+			$('.ui.menu a.item').on('click', function () {
+				$(this)
+					.addClass('active')
+					.siblings()
+					.removeClass('active');
+			});
+		});
+		
 	</script>
 	
 	<!--- Gitter --->
@@ -78,15 +91,15 @@
 			<div class="header item">
 				<span style="font-family: 'Exo 2'; font-size: 1.5em; font-weight: 600; ">OIer meet!</span>
 			</div>
-			<a class="active item" data-tab="login">login</a>
-			<a class="item" data-tab="register">register</a>
+			<a class="active item" data-tab="login">登录</a>
+			<a class="item" data-tab="register">注册</a>
 		</div>
 	</div>
 	<script>
 	if (visits<=1){
 		swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您介意公开自己的部分信息，请不要申请加入，若他人公开了您的信息，请联系我们，我们将尽快删除，若您继续浏览，则代表您同意以上条约（此弹窗仅在您首次访问时出现）", "info");
 	}
-	</script>
+	</script> 
 	<div class="ui tab active container" data-tab="login">
 		<div style="margin-top: 28px; ">
 			<div class="ui main container">
@@ -113,7 +126,7 @@
 										</div>
 										<div class="ui blue submit button">登录</div>
 									</form>
-									<div class="ui bottom attached warning message"><i class="icon help"></i> 还没有账号？ <a data-tab="register">点此</a>注册。 </div>
+									<div class="ui bottom attached warning message"><i class="icon help"></i> 还没有账号？ <a class="item" data-tab="register">点此</a>注册。 </div>
 								</div>
 							</div>
 						</div>
@@ -122,12 +135,12 @@
 			</div>
 		</div>
 	</div>
-	<div class="ui container" data-tab="register">
+	<div class="ui tab container" data-tab="register">
 		<div style="margin-top: 28px; ">
 			<div class="ui main container">
 				<div style="padding-left: 1em; padding-right: 1em; ">
 					<div class="ui two column grid">
-						<div class="three column row">
+						<div class="two column row">
 							<div class="eleven wide column">
 								<h4 class="ui top attached block header"><i class="ui info icon"></i>注册</h1>
 								<div class="ui bottom attached segment">
@@ -154,7 +167,7 @@
 										</div>
 										<div class="field">
 											<label>重复一遍密码</label>
-											<input type="RepeatPassword">
+											<input type="Password">
 										</div>
 										<div class="inline field">
 											<div class="ui checkbox">
@@ -164,7 +177,7 @@
 										</div>
 										<div class="ui blue submit button">注册</div>
 									</form>
-									<div class="ui bottom attached warning message"><i class="icon help"></i> 已经注册？ <a data-tab="login">点此</a>登录。 </div>
+									<div class="ui bottom attached warning message"><i class="icon help"></i> 已经注册？ <a class="item" data-tab="login">点此</a>登录。 </div>
 								</div>
 							</div>
 						</div>
