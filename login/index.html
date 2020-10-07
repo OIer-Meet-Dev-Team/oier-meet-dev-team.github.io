@@ -87,7 +87,42 @@
 		swal("使用条约", "本站将使用cookie以给您更好的使用体验，若您介意公开自己的部分信息，请不要申请加入，若他人公开了您的信息，请联系我们，我们将尽快删除，若您继续浏览，则代表您同意以上条约（此弹窗仅在您首次访问时出现）", "info");
 	}
 	</script>
-	<div class="ui tab active container" data-tab="register">
+	<div class="ui tab active container" data-tab="login">
+		<div style="margin-top: 28px; ">
+			<div class="ui main container">
+				<div style="padding-left: 1em; padding-right: 1em; ">
+					<div class="ui two column grid">
+						<div class="three column row">
+							<div class="eleven wide column">
+								<h4 class="ui top attached block header"><i class="ui info icon"></i>注册</h1>
+								<div class="ui bottom attached segment">
+									<div class="ui attached message">
+										<div class="header">欢迎来到 OIer meet! </div>
+										<p>填写下面的表单来登录账户</p>
+									</div>
+									<form class="ui form attached fluid segment">
+										<div class="one fields">
+											<div class="field">
+												<label>用户名</label>
+												<input placeholder="UserName" type="text">
+											</div>
+										</div>
+										<div class="field">
+											<label>密码</label>
+											<input type="Password">
+										</div>
+										<div class="ui blue submit button">登录</div>
+									</form>
+									<div class="ui bottom attached warning message"><i class="icon help"></i> 还没有账号？ <a data-tab="register">点此</a>注册。 </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ui container" data-tab="register">
 		<div style="margin-top: 28px; ">
 			<div class="ui main container">
 				<div style="padding-left: 1em; padding-right: 1em; ">
@@ -130,41 +165,6 @@
 										<div class="ui blue submit button">注册</div>
 									</form>
 									<div class="ui bottom attached warning message"><i class="icon help"></i> 已经注册？ <a data-tab="login">点此</a>登录。 </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="ui tab active container" data-tab="login">
-		<div style="margin-top: 28px; ">
-			<div class="ui main container">
-				<div style="padding-left: 1em; padding-right: 1em; ">
-					<div class="ui two column grid">
-						<div class="three column row">
-							<div class="eleven wide column">
-								<h4 class="ui top attached block header"><i class="ui info icon"></i>注册</h1>
-								<div class="ui bottom attached segment">
-									<div class="ui attached message">
-										<div class="header">欢迎来到 OIer meet! </div>
-										<p>填写下面的表单来登录账户</p>
-									</div>
-									<form class="ui form attached fluid segment">
-										<div class="one fields">
-											<div class="field">
-												<label>用户名</label>
-												<input placeholder="UserName" type="text">
-											</div>
-										</div>
-										<div class="field">
-											<label>密码</label>
-											<input type="Password">
-										</div>
-										<div class="ui blue submit button">登录</div>
-									</form>
-									<div class="ui bottom attached warning message"><i class="icon help"></i> 还没有账号？ <a data-tab="register">点此</a>注册。 </div>
 								</div>
 							</div>
 						</div>
