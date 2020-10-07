@@ -126,34 +126,17 @@
 									<script src="https://cdn.jsdelivr.net/npm/minivaline@4/dist/MiniValine.min.js"></script>
 									<div class="mvcomment"></div>
 									    <script>
-									    function load_minivaline() {
-										setTimeout(function() {
-										    var HEAD = document.getElementsByTagName('head')[0] || document.documentElement;
-										    var src = 'https://cdn.jsdelivr.net/npm/minivaline@3/dist/MiniValine.min.js'
-										    var script = document.createElement('script')
-										    script.setAttribute('type','text/javascript')
-										    script.onload = function() {
-										       pjax_minivaline()
-										    }
-										    script.setAttribute('src', src)
-										    HEAD.appendChild(script)
-										}, 1);
-									    };
-									    function pjax_minivaline() {
-										if(!document.querySelectorAll(".mvcomment")[0])return;
+									  
 										new MiniValine({
 										    el: '.mvcomment',
 										    appId: 'VEcfPPSDN0CjuPhjFOw2LLmE-MdYXbMMI',
 										    appKey: 'yaEDtb3puG3HNAz3nrQj8Bpc',
+										    barrager: 2,
 										    placeholder: '来啊，快活啊qaqaq',
 										    mode: 'xCss', 
-										    master: ['780c17998bd227a38cef1edad96c54a2','98ab4336f1f239d5fd9a1124af629ff9','44b22287915c534479badbdbe20f3dc5']
+										    master: ["780c17998bd227a38cef1edad96c54a2","98ab4336f1f239d5fd9a1124af629ff9","44b22287915c534479badbdbe20f3dc5"]
 										});
-									    }
-									    load_minivaline();
-									    document.addEventListener('pjax:complete', function () {
-										pjax_minivaline();
-									    });
+									    
 									    </script>
 										
 								</div>
