@@ -9,3 +9,5 @@
 **贡献参赛数据** 前往 [此处](https://github.com/OIer-Meet-Dev-Team/oier-meet-dev-team.github.io/issues/10)
 
 整理工作不易，求个 star ~
+
+***本项目已经作废！***
